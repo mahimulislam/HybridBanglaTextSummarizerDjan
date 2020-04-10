@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Hybrid Bengali Text Summarizer</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+<div>
+            <h1><a href="/">Hybrid Bengali Text Summarizer </a></h1>
+        </div>
+
+<form name = "form" action = '.'
+         method = "POST" >{% csrf_token %}
+<div class="form-group purple-border">
+  <label for="exampleFormControlTextarea4">Input</label>
+  <textarea class="form-control" id="exampleFormControlTextarea4" name="tes" rows="10"></textarea>
+</div>
+<input type="submit" value="Submit" />
+</form>
+<h>Your News Document</h>
+<br/>
+{{ title1 }}
+<br/>
+<h>Generated Summary</h>
+<br/>
+{{ title }}
+</body>
+</html>
